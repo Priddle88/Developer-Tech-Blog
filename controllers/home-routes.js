@@ -1,24 +1,30 @@
 const router = require('express').Router();
-const { Gallery, Painting } = require('../models');
+const { Blog } = require('../models');
 
 // GET all galleries for homepage
 router.get('/', async (req, res) => {
   try {
-    // const dbGalleryData = await Gallery.findAll({
-    //   include: [
-    //     {
-    //       model: Painting,
-    //       attributes: ['filename', 'description'],
-    //     },
-    //   ],
-    // });
+    const dbBlogData = await Blog.findAll({})
 
-    // const galleries = dbGalleryData.map((gallery) =>
-    //   gallery.get({ plain: true })
-    // );
+    const posts = dbBlogData.map((blog) =>
+      blog.get({ plain: true })
+    );
+    console.log(posts);
     res.render('homepage', {
-      // galleries,
+      posts,
       loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(420).json(err);
+  }
+});
+
+router.get('/dashboard', async (req, res) => {
+  try {
+    res.render('dashboard', {
+      loggedIn: req.session.loggedIn,
+
     });
   } catch (err) {
     console.log(err);
