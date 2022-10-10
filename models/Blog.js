@@ -21,6 +21,11 @@ Blog.init(
             allowNull: false,
             unique: true,
         },
+        post_date: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true,
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {

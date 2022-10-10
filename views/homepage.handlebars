@@ -1,11 +1,12 @@
 {{#if loggedIn}}
 
 {{#each posts}}
-<div>
-    <div>
+<div class="post">
+    <div class="postTitle">
         <p>{{title}}</p>
-        {{!-- <p>Posted by {{user_id}} on</p> --}}
+        <p>Posted by {{user.username}} on {{format_date post_date}}</p>
     </div>
+    {{content}}
 </div>
 {{/each}}
 

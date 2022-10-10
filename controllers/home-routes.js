@@ -1,14 +1,26 @@
 const router = require('express').Router();
-const { Blog } = require('../models');
+const { Blog, User } = require('../models');
 
 // GET all galleries for homepage
 router.get('/', async (req, res) => {
   try {
-    const dbBlogData = await Blog.findAll({})
+    const dbBlogData = await Blog.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
+    });
 
     const posts = dbBlogData.map((blog) =>
       blog.get({ plain: true })
     );
+
+    // const userName = dbUserData.map((newName) => {
+
+    // })
+
     console.log(posts);
     res.render('homepage', {
       posts,
