@@ -74,7 +74,16 @@ nav a:hover {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.dashboard {
+  flex: 4;
+  background-color: var(--light);
+  padding: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .btn-no-style {
@@ -166,5 +175,28 @@ img {
 
 .btn1 {
   padding: 10px;
+  margin-bottom: 100px;
 }
 
+.post {
+  border: 3px solid black;
+}
+
+.postTitle {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(26, 34, 56);
+  color: white;
+  padding: 15px;
+  padding-bottom: 0px;
+  align-items: end;
+}
+
+.content {
+  padding: 15px;
+}
+
+.dashContent {
+  display: flex;
+  align-items: flex-end;
+}

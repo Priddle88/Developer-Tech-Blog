@@ -1,13 +1,15 @@
-{{#if loggedIn}}
+<div class="gallery">
+    {{#if loggedIn}}
 
-{{#each posts}}
-<div class="post">
-    <div class="postTitle">
-        <p>{{title}}</p>
-        <p>Posted by {{user.username}} on {{format_date post_date}}</p>
+    {{#each posts}}
+    <div class="post">
+        <div class="postTitle">
+            <p>{{title}}</p>
+            <p>Posted by {{user.username}} on {{format_date post_date}}</p>
+        </div>
+        <p class="content">{{content}}</p>
     </div>
-    {{content}}
-</div>
-{{/each}}
+    {{/each}}
 
-{{/if}}
+    {{/if}}
+</div>
