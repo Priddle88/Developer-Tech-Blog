@@ -173,7 +173,7 @@ img {
   align-items: center;
 }
 
-.newPostBtn {
+#newPostBtn {
   padding: 10px;
   margin-bottom: 100px;
 }
