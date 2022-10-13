@@ -1,9 +1,21 @@
 <div class="dashboard">
     {{#if loggedIn}}
+    <div class="postBox gone">
+        <div class="postTitle">
+            <p>New Post</p>
+        </div>
+        <div class="newPost">
+            <input class="form-control" type="text" placeholder="Post Title">
+            <input class="form-control form-control-lg" type="text" placeholder="Content Here">
+        </div>
+        <button class="btnPost" type="button">Submit</button>
+    </div>
     <div class="dashContent">
-        <div class="somethingelse">
+        <div class="btnBox">
             <button id="newPostBtn" type="button">+ New Post</button>
         </div>
     </div>
     {{/if}}
 </div>
+
+<script src="/js/script.js"></script>

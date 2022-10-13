@@ -81,7 +81,7 @@ nav a:hover {
   flex: 4;
   background-color: var(--light);
   padding: 50px;
-  display: flex;
+  /* display: flex; */
   flex-flow: row wrap;
   justify-content: center;
 }
@@ -175,7 +175,7 @@ img {
 
 #newPostBtn {
   padding: 10px;
-  margin-bottom: 100px;
+  margin: 50px;
 }
 
 .post {
@@ -190,6 +190,7 @@ img {
   padding: 15px;
   padding-bottom: 0px;
   align-items: end;
+  margin-bottom: 10px;
 }
 
 .content {
@@ -199,4 +200,32 @@ img {
 .dashContent {
   display: flex;
   align-items: flex-end;
+}
+
+.btnBox {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.btnPost {
+  width: 100%;
+  background-color: rgb(26, 34, 56);
+  color: white;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.newPost {
+  margin: 0 10px;
+}
+
+.postBox {
+  border: 3px solid;
+}
+
+.gone {
+  display: none;
 }
