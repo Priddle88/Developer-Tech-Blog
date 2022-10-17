@@ -3,7 +3,8 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-const mysql = require('mysql2')
+const mysql = require('mysql2');
+const moment = require('moment');
 
 const routes = require('./controllers');
 const sequelize = require('./config/connection');

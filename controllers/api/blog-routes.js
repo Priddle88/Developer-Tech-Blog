@@ -2,11 +2,11 @@ const router = require('express').Router();
 const { Blog } = require('../../models');
 
 router.post('/', async (req, res) => {
-    console.log("Hello Hello");
     try {
         const dbBlogData = await Blog.create({
             title: req.body.title,
-            content: req.body.title,
+            content: req.body.content,
+            user_id: req.body.user_id,
         });
 
         req.session.save(() => {
