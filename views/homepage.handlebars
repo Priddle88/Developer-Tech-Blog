@@ -1,11 +1,11 @@
 <div class="gallery">
     {{#if loggedIn}}
 
-    {{#each posts}}
+    {{#each blogs}}
     <div class="post">
         <div class="postTitle">
             <p>{{title}}</p>
-            <p>Posted by {{user.username}} on {{format_date post_date}}</p>
+            <p>Posted by {{user.username}} on {{format_date createdAt}}</p>
         </div>
         <p class="content">{{content}}</p>
     </div>

@@ -1,5 +1,10 @@
 const router = require('express').Router();
+// const { SELECT } = require('sequelize/types/query-types');
 const { User } = require('../../models');
+
+// router.get('/', async (req, res) => {
+//   console.log("Hello!");
+// });
 
 // CREATE new user
 router.post('/', async (req, res) => {

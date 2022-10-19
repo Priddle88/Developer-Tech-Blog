@@ -9,7 +9,7 @@ addPost = async (event) => {
         const newTitle = document.querySelector('input[name="post-title"]').value;
         const newContent = document.querySelector('input[name="post-content"]').value;
 
-        await fetch(`/api/post`, {
+        await fetch(`/api/posts`, {
             method: 'POST',
             body: JSON.stringify({
                 title: newTitle,
@@ -28,4 +28,3 @@ addPost = async (event) => {
 document.getElementById('newPostBtn').addEventListener('click', addPost);
 
 console.log("THIS IS HERE");
-

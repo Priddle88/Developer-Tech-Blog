@@ -6,12 +6,11 @@ router.post('/', async (req, res) => {
         const dbBlogData = await Blog.create({
             title: req.body.title,
             content: req.body.content,
-            user_id: req.body.user_id,
         });
 
         req.session.save(() => {
             req.session.loggedIn = true;
-
+            req.session.
             res.status(200).json(dbBlogData);
         });
     } catch (err) {
