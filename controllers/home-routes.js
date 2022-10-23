@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Blog, User, Posts } = require('../models');
+const { Blog, User, Post } = require('../models');
 
 // GET all posts for homepage
 router.get('/', async (req, res) => {
@@ -13,15 +13,20 @@ router.get('/', async (req, res) => {
       ],
     });
 
+    const postData = await Post.findAll({
+      include: [User],
+    });
+
     const blogs = dbBlogData.map((blog) =>
       blog.get({ plain: true })
     );
 
-    // const userName = dbUserData.map((newName) => {
-
-    // })
+    const posts = postData.map((post) => {
+      post.get({ plain: true })
+    })
 
     res.render('homepage', {
+      posts,
       blogs,
       loggedIn: req.session.loggedIn,
     });

@@ -1,7 +1,21 @@
 <div class="gallery">
     {{#if loggedIn}}
+    <p>Hello</p>
+    {{!-- {{#each blogs}}
+    <div class="post">
+        <div class="postTitle">
+            <p>{{title}}</p>
+            <p>Posted by {{user.username}} on {{format_date createdAt}}</p>
+        </div>
+        <p class="content">{{content}}</p>
+    </div>
+    {{/each}}
 
-    {{#each blogs}}
+    {{!-- {{#each post}}
+    <h2>{{title}}</h2>
+    {{/each}} --}}
+
+    {{#each posts}}
     <div class="post">
         <div class="postTitle">
             <p>{{title}}</p>

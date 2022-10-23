@@ -6,14 +6,15 @@ addPost = async (event) => {
 
     postPost = async (event) => {
         event.preventDefault();
-        const newTitle = document.querySelector('input[name="post-title"]').value;
-        const newContent = document.querySelector('input[name="post-content"]').value;
+        const title = document.querySelector('input[name="post-title"]').value;
+        const content = document.querySelector('input[name="post-content"]').value;
+        // console.log(newTitle);
 
-        await fetch(`/api/posts`, {
+        await fetch(`/api/post`, {
             method: 'POST',
             body: JSON.stringify({
-                title: newTitle,
-                content: newContent,
+                title,
+                content,
             }),
             headers: { 'Content-Type': 'application/json' },
         });
