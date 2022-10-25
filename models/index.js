@@ -1,5 +1,5 @@
 const User = require('./User');
-const Blog = require('./Blog');
+// const Blog = require('./Blog');
 const Post = require('./Post');
 
 // User.hasMany(Blog, {
@@ -21,4 +21,4 @@ Post.belongsTo(User, {
     onDelete: 'CASCADE'
 });
 
-module.exports = { User, Blog, Post };
+module.exports = { User, Post };

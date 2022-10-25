@@ -13,8 +13,8 @@ addPost = async (event) => {
         await fetch(`/api/post`, {
             method: 'POST',
             body: JSON.stringify({
-                title: title,
-                content: content,
+                heading: title,
+                body: content,
             }),
             headers: { 'Content-Type': 'application/json' },
         });

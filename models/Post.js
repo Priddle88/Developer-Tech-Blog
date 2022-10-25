@@ -5,10 +5,10 @@ class Post extends Model { }
 
 Post.init(
     {
-        title: {
+        heading: {
             type: DataTypes.STRING,
         },
-        content: {
+        body: {
             type: DataTypes.STRING,
         },
         // user_id: {
