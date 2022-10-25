@@ -6,11 +6,11 @@ class Blog extends Model {
 
 Blog.init(
     {
-        title: {
+        newTitle: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        content: {
+        newContent: {
             type: DataTypes.STRING,
             allowNull: false,
             unique: true,

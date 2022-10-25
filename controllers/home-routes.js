@@ -4,22 +4,22 @@ const { Blog, User, Post } = require('../models');
 // GET all posts for homepage
 router.get('/', async (req, res) => {
   try {
-    const dbBlogData = await Blog.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['username'],
-        },
-      ],
-    });
+    // const dbBlogData = await Blog.findAll({
+    //   include: [
+    //     {
+    //       model: User,
+    //       attributes: ['username'],
+    //     },
+    //   ],
+    // });
 
     const postData = await Post.findAll({
       include: [User],
     });
 
-    const blogs = dbBlogData.map((blog) =>
-      blog.get({ plain: true })
-    );
+    // const blogs = dbBlogData.map((blog) =>
+    //   blog.get({ plain: true })
+    // );
 
     const posts = postData.map((post) => {
       post.get({ plain: true })
@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
 
     res.render('homepage', {
       posts,
-      blogs,
+      // blogs,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
