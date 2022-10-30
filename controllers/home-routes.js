@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Blog, User, Post } = require('../models');
+const { Blog, User, Post, Comment } = require('../models');
 
 // GET all posts for homepage
 router.get('/', async (req, res) => {
@@ -34,6 +34,31 @@ router.get('/', async (req, res) => {
   } catch (err) {
     console.log(err);
     res.status(420).json(err);
+  }
+});
+
+// get single post
+router.get('/post/:id', async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        User,
+        {
+          model: Comment,
+          include: [User],
+        },
+      ],
+    });
+
+    if (postData) {
+      const post = postData.get({ plain: true });
+
+      res.render('comment', { post });
+    } else {
+      res.status(404).end();
+    }
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
