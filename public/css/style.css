@@ -179,7 +179,9 @@ img {
 }
 
 .post {
+  width: 100%;
   border: 3px solid black;
+  margin: 10px;
 }
 
 .postTitle {
@@ -228,4 +230,8 @@ img {
 
 .gone {
   display: none;
+}
+
+.moreSpace {
+  padding-right: 10px;
 }

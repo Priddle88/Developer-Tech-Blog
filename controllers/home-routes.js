@@ -28,8 +28,6 @@ router.get('/', async (req, res) => {
     console.log(posts);
     res.render('homepage', {
       posts,
-      // blogs,
-      title: "Hello Kitty",
       userId: req.session.userId,
       loggedIn: req.session.loggedIn,
     });
