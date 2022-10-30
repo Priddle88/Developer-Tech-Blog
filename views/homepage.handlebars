@@ -1,5 +1,5 @@
 <div class="gallery">
-    {{!-- {{#if loggedIn}} --}}
+    {{#if loggedIn}}
     {{!-- <p>Hello</p> --}}
     {{!-- <p>{{posts.heading}}</p> --}}
 
@@ -17,8 +17,6 @@
     <h2>{{title}}</h2>
     {{/each}} --}}
 
-    <h2>{{title}}</h2>
-
     {{#each posts}}
     <p>{{posts.heading}}</p>
     <div class="post">
@@ -30,5 +28,5 @@
     </div>
     {{/each}}
 
-    {{!-- {{/if}} --}}
+    {{/if}}
 </div>
