@@ -2,7 +2,13 @@
 
 ## Description
 
-I attempted to make a blog. Didn't go well at all.
+```md
+AS A developer who writes about tech
+I WANT a CMS-style blog site
+SO THAT I can publish articles, blog posts, and my thoughts and opinions
+```
+
+The task of creating a blog was more difficult than I expected. The main focus for me was trying to input data into the seperate models and having all the models relate to each other. The other thing is trying to get the data from the models to show up on the handlebars.
 
 ## Table of Contents
 
