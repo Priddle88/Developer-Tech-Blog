@@ -1,4 +1,5 @@
 <div class="gallery">
+    {{#if loggedIn}}
     <div class="post">
         <div class="postTitle">
             <p class="moreSpace">{{post.heading}}</p>
@@ -6,4 +7,5 @@
         </div>
         <p class="content">{{post.body}}</p>
     </div>
+    {{/if}}
 </div>

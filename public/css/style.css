@@ -235,3 +235,8 @@ img {
 .moreSpace {
   padding-right: 10px;
 }
+
+.postLink {
+  text-decoration: none;
+  color: inherit;
+}

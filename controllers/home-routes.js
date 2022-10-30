@@ -53,7 +53,11 @@ router.get('/post/:id', async (req, res) => {
     if (postData) {
       const post = postData.get({ plain: true });
 
-      res.render('comment', { post });
+      res.render('comment', {
+        post,
+        userId: req.session.userId,
+        loggedIn: req.session.loggedIn,
+      });
     } else {
       res.status(404).end();
     }

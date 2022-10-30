@@ -20,8 +20,8 @@
     {{#each posts}}
     <div class="post">
         <div class="postTitle">
-            <p class="moreSpace">{{heading}}
-                <a href="/post/{{id}}">{{heading}}</a>
+            <p class="moreSpace">
+                <a href="/post/{{id}}" class="postLink">{{heading}}</a>
             </p>
             <p>Posted by {{user.username}} on {{format_date createdAt}}</p>
         </div>
