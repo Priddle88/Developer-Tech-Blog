@@ -4,7 +4,8 @@ const { Post } = require('../../models/');
 
 router.post('/', async (req, res) => {
     const body = req.body;
-
+    console.log(body);
+    console.log(req.session);
     try {
         const newPost = await Post.create({ ...body, userId: req.session.userId });
         res.json(newPost);

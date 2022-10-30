@@ -20,14 +20,17 @@ router.get('/', async (req, res) => {
     // const blogs = dbBlogData.map((blog) =>
     //   blog.get({ plain: true })
     // );
+    console.log(postData);
 
-    const posts = postData.map((post) => {
-      post.get({ plain: true })
-    })
+    const posts = postData.map((post) => post.get({ plain: true }));
 
+    console.log('THIS IS HERE!');
+    console.log(posts);
     res.render('homepage', {
       posts,
       // blogs,
+      title: "Hello Kitty",
+      userId: req.session.userId,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
