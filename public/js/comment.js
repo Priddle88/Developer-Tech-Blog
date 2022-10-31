@@ -1,6 +1,3 @@
-// const { post } = require("../../controllers/api");
-
-console.log("TESTING");
 
 const commentFormHandler = async function (event) {
     event.preventDefault();
@@ -24,7 +21,7 @@ const commentFormHandler = async function (event) {
                 'Content-Type': 'application/json'
             }
         });
-        // document.location.replace('/');
+
         document.location.reload();
     }
 };

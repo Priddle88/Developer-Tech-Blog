@@ -102,6 +102,10 @@ img {
   height: auto;
 }
 
+h3 {
+  font-size: 18px;
+}
+
 .painting {
   width: 50%;
   background-color: white;
@@ -193,6 +197,10 @@ img {
   padding-bottom: 0px;
   align-items: end;
   margin-bottom: 10px;
+}
+
+.postTitle p {
+  font-size: 25px;
 }
 
 .content {
