@@ -178,7 +178,8 @@ h3 {
 }
 
 #newPostBtn {
-  padding: 10px;
+  padding: 5px 0;
+  width: 297px;
   margin: 50px;
 }
 
@@ -215,7 +216,9 @@ h3 {
 .btnBox {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
+  margin: -24px 0;
 }
 
 .btnPost {
@@ -255,4 +258,8 @@ h3 {
   background-color: #086f9f;
   font-size: large;
   padding: 5px 22px;
+}
+
+.dashHeader {
+  text-align: right;
 }
