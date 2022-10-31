@@ -1,3 +1,5 @@
+// const { post } = require("../../controllers/api");
+
 console.log("TESTING");
 
 const commentFormHandler = async function (event) {
@@ -15,14 +17,15 @@ const commentFormHandler = async function (event) {
         await fetch('/api/comment', {
             method: 'POST',
             body: JSON.stringify({
-                body: body
+                body: body,
+                postId: postId,
             }),
             headers: {
                 'Content-Type': 'application/json'
             }
         });
         // document.location.replace('/');
-        // document.location.reload();
+        document.location.reload();
     }
 };
 
