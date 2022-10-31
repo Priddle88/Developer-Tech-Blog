@@ -15,6 +15,23 @@
             <button id="newPostBtn" type="button">+ New Post</button>
         </div>
     </div>
+    <div>
+        <p>
+            {{User.username}}
+        </p>
+        {{#each posts}}
+        <div class="post">
+            <div class="postTitle">
+                <p class="moreSpace">
+                    {{heading}}
+                </p>
+                <p>Posted by {{user.username}} on {{format_date createdAt}}</p>
+            </div>
+            <p class="content">{{body}}</p>
+        </div>
+        {{/each}}
+    </div>
+
     {{/if}}
 </div>
 
