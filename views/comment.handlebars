@@ -22,7 +22,7 @@
                     {{body}}
                 </p>
                 <p>
-                    &mdash; {{User.username}}, {{format_date createdAt}}
+                    &mdash; {{user.username}}, {{format_date createdAt}}
                 </p>
             </div>
             {{/each}}
@@ -42,10 +42,10 @@
 
             <textarea name="comment-body" class="form-input"></textarea>
 
-            <button type="submit" class="btn">Submit</button>
+            <button type="button" class="btn btnSizing">Submit</button>
         </div>
     </form>
     {{/if}}
 </div>
 
-<script src="/public/js/comment.js"></script>
+<script src="/js/comment.js"></script>

@@ -1,4 +1,3 @@
-// const moment = require('moment');
 
 addPost = async (event) => {
     event.preventDefault();
@@ -27,5 +26,3 @@ addPost = async (event) => {
 };
 
 document.getElementById('newPostBtn').addEventListener('click', addPost);
-
-console.log("THIS IS HERE");

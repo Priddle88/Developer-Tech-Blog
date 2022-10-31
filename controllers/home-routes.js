@@ -4,28 +4,13 @@ const { Blog, User, Post, Comment } = require('../models');
 // GET all posts for homepage
 router.get('/', async (req, res) => {
   try {
-    // const dbBlogData = await Blog.findAll({
-    //   include: [
-    //     {
-    //       model: User,
-    //       attributes: ['username'],
-    //     },
-    //   ],
-    // });
 
     const postData = await Post.findAll({
       include: [User],
     });
 
-    // const blogs = dbBlogData.map((blog) =>
-    //   blog.get({ plain: true })
-    // );
-    console.log(postData);
-
     const posts = postData.map((post) => post.get({ plain: true }));
 
-    console.log('THIS IS HERE!');
-    console.log(posts);
     res.render('homepage', {
       posts,
       userId: req.session.userId,
