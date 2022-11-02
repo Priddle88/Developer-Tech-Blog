@@ -53,7 +53,15 @@ router.get('/post/:id', async (req, res) => {
 
 router.get('/edit/:id', async (req, res) => {
   try {
-    const postData = await Post.findByPk(req.params.id);
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        User,
+        {
+          model: Comment,
+          include: [User],
+        },
+      ],
+    });
 
     if (postData) {
       const post = postData.get({ plain: true });
