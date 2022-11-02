@@ -20,14 +20,14 @@
         {{#each posts}}
         <section class="post">
             <div class="postTitle">
-                <input type="hidden" name="post" value="{{post.id}}" />
                 <p class="moreSpace">
                     {{heading}}
                 </p>
                 <p>Posted by {{user.username}} on {{format_date createdAt}}</p>
             </div>
             <div class="contentBox">
-                <p class="content">{{body}}</p>
+                <p class="content">{{body}} with {{id}}</p>
+                <input type="hidden" name="postId" value="{{id}}" />
                 <div class="editRmv">
                     <a href="/edit/{{id}}">
                         <button type="button" class="btn editBtn">Edit</button>
