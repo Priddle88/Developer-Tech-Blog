@@ -51,6 +51,26 @@ router.get('/post/:id', async (req, res) => {
   }
 });
 
+router.get('/edit/:id', async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id);
+
+    if (postData) {
+      const post = postData.get({ plain: true });
+
+      res.render('edit', {
+        post,
+        userId: req.session.userId,
+        loggedIn: req.session.loggedIn,
+      });
+    } else {
+      res.status(404).end();
+    }
+  } catch (err) {
+    res.redirect('login');
+  }
+});
+
 router.get('/dashboard', async (req, res) => {
   try {
 

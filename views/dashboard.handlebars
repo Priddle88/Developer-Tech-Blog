@@ -18,15 +18,23 @@
     </div>
     <div>
         {{#each posts}}
-        <div class="post">
+        <section class="post">
             <div class="postTitle">
                 <p class="moreSpace">
                     {{heading}}
                 </p>
                 <p>Posted by {{user.username}} on {{format_date createdAt}}</p>
             </div>
-            <p class="content">{{body}}</p>
-        </div>
+            <div class="contentBox">
+                <p class="content">{{body}}</p>
+                <div class="editRmv">
+                    <a href="/edit-post">
+                        <button type="button" class="btn editBtn">Edit</button>
+                    </a>
+                    <button type="button" id="removeBtn" class="btn">Delete</button>
+                </div>
+            </div>
+        </section>
         {{/each}}
     </div>
 
@@ -34,3 +42,4 @@
 </div>
 
 <script src="/js/post.js"></script>
+<script src="/js/edit.js"></script>
